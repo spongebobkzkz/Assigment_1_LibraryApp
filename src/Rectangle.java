@@ -12,7 +12,7 @@ public class Rectangle {
     }
 
     public Rectangle(double width, double height) {
-        this(); // call default constructor
+        this(); 
         setWidth(width);
         setHeight(height);
     }
