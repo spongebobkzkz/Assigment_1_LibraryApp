@@ -5,21 +5,18 @@ public class Rectangle {
     private int id;
     private static int idGen = 1;
 
-    // 1) Default constructor
     public Rectangle() {
         this.width = 1.0;
         this.height = 1.0;
         this.id = idGen++;
     }
 
-    // 2) Constructor with parameters
     public Rectangle(double width, double height) {
         this(); // call default constructor
         setWidth(width);
         setHeight(height);
     }
 
-    // Getters
     public double getWidth() {
         return width;
     }
@@ -32,7 +29,6 @@ public class Rectangle {
         return id;
     }
 
-    // Setters with validation
     public void setWidth(double width) {
         if (width <= 0) {
             throw new IllegalArgumentException("Width must be > 0");
@@ -47,12 +43,10 @@ public class Rectangle {
         this.height = height;
     }
 
-    // area
     public double area() {
         return width * height;
     }
 
-    // perimeter
     public double perimeter() {
         return 2 * (width + height);
     }
