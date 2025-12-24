@@ -16,7 +16,7 @@ public class Book {
     }
 
     public Book(String title, String author, int year) {
-        this(); // call default constructor
+        this();
         setTitle(title);
         setAuthor(author);
         setYear(year);
