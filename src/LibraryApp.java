@@ -105,7 +105,6 @@ public class LibraryApp {
         }
     }
 
-    // 1) Print all books
     private void printAllBooks() {
         if (books.isEmpty()) {
             System.out.println("No books in the library");
@@ -116,7 +115,6 @@ public class LibraryApp {
         }
     }
 
-    // 2) Add new book
     private void addNewBook() {
         String title = readNonEmptyString("Enter title: ");
         String author = readNonEmptyString("Enter author: ");
@@ -131,7 +129,6 @@ public class LibraryApp {
         }
     }
 
-    // 3) Search books by title (case-insensitive)
     private void searchBooksByTitle() {
         String part = readNonEmptyString("Enter part of the title: ");
         String query = part.toLowerCase(Locale.ROOT);
@@ -150,7 +147,6 @@ public class LibraryApp {
         }
     }
 
-    // helper
     private Book findBookById(int id) {
         for (Book b : books) {
             if (b.getId() == id) {
@@ -160,7 +156,6 @@ public class LibraryApp {
         return null;
     }
 
-    // 4) Borrow a book
     private void borrowBook() {
         int id = readInt("Enter book id to borrow: ");
         Book book = findBookById(id);
@@ -177,7 +172,6 @@ public class LibraryApp {
         }
     }
 
-    // 5) Return a book
     private void returnBook() {
         int id = readInt("Enter book id to return: ");
         Book book = findBookById(id);
@@ -194,7 +188,6 @@ public class LibraryApp {
         }
     }
 
-    // 6) Delete a book by id
     private void deleteBookById() {
         int id = readInt("Enter book id to delete: ");
         Book book = findBookById(id);
@@ -206,7 +199,6 @@ public class LibraryApp {
         System.out.println("Book deleted: " + book);
     }
 
-    // main method to start app
     public static void main(String[] args) {
         LibraryApp app = new LibraryApp();
         app.run();
