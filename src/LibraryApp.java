@@ -81,7 +81,6 @@ public class LibraryApp {
         while (true) {
             int year = readInt(prompt);
             try {
-                // simple validation via temporary Book
                 int currentYear = java.time.Year.now().getValue();
                 if (year < 1500 || year > currentYear) {
                     System.out.println("Year must be between 1500 and " + currentYear);
